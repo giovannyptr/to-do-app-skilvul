@@ -12,7 +12,7 @@ export function setTasks(payload) {
 
 export function getTasks() {
 	return (dispatch) => {
-		fetch(`http://localhost:3001/gettodo`, {
+		fetch(`https://frozen-ridge-79795-c98a6f9c5261.herokuapp.com/gettodo`, {
 		})
 			.then((result) => {
 				return result.json();
@@ -28,7 +28,7 @@ export function getTasks() {
 
 export function getActiveTasks() {
 	return (dispatch) => {
-		fetch(`http://localhost:3001/getactive`, {
+		fetch(`https://frozen-ridge-79795-c98a6f9c5261.herokuapp.com/getactive`, {
 		})
 			.then((result) => {
 				return result.json();
@@ -44,7 +44,7 @@ export function getActiveTasks() {
 
 export function getCompletTasks() {
 	return (dispatch) => {
-		fetch(`http://localhost:3001/getcomplete`, {
+		fetch(`https://frozen-ridge-79795-c98a6f9c5261.herokuapp.com/getcomplete`, {
 		})
 			.then((result) => {
 				return result.json();
@@ -61,7 +61,7 @@ export function getCompletTasks() {
 export function addTask(payload) {
 	return () => {
 		return new Promise((resolve, reject) => {
-			fetch(`http://localhost:3001/addtodo`, {
+			fetch(`https://frozen-ridge-79795-c98a6f9c5261.herokuapp.com/addtodo`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -87,7 +87,7 @@ export function addTask(payload) {
 export function editTask(payload, id) {
 	return () => {
 		return new Promise((resolve, reject) => {
-			fetch(`http://localhost:3001/edittask/${id}`, {
+			fetch(`https://frozen-ridge-79795-c98a6f9c5261.herokuapp.com/edittask/${id}`, {
 				method: "PUT",
 				headers: {
 					"Content-Type": "application/json",
@@ -113,7 +113,7 @@ export function editTask(payload, id) {
 export function editStatus(payload, id) {
 	return () => {
 		return new Promise((resolve, reject) => {
-			fetch(`http://localhost:3001/editstatus/${id}`, {
+			fetch(`https://frozen-ridge-79795-c98a6f9c5261.herokuapp.com/editstatus/${id}`, {
 				method: "PUT",
 				headers: {
 					"Content-Type": "application/json",
@@ -139,7 +139,7 @@ export function editStatus(payload, id) {
 export function deleteTask(id) {
 	return (dispatch, getState) => {
 		return new Promise((resolve, reject) => {
-			fetch(`http://localhost:3001/task/${id}`, {
+			fetch(`https://frozen-ridge-79795-c98a6f9c5261.herokuapp.com/task/${id}`, {
 				method: "DELETE",
 			})
 				.then((result) => {
