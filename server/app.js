@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3001
+PORT = process.env.PORT
 const routes = require('./routes/index')
 
 app.use(require("cors")());
@@ -12,6 +12,6 @@ app.use(express.urlencoded({extended:false}))
 app.use(routes)
 
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening at http://localhost:${PORT}`)
 })
